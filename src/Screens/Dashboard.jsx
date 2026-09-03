@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Button } from 'react-bootstrap';
+
 
 
 export default function Dashboard(){
@@ -8,12 +10,12 @@ export default function Dashboard(){
     const [lowerCaseCount, setLowerCaseCount] = useState(0); //A variable to hold the amount or lowercase letters present in the password 
     const [symbolCount, setSymbolCount] = useState(0);       //A variable to hold the amount of symbols present in the password 
     const [numberCount, setNumberCount] = useState(0);       //A varaible to hold the amount of numbers present in the password 
-
+    
     const lowercase = /[a-z]/
     const uppercase = /[A-Z]/
     const number = /[0-9]/
     const symbols = /[!@#$%^&*,.()-_+=/?]/
-
+    
     {/*Update the state everytime a change is made to the password input*/}
     const handleChange = (e) => {
         const newPassword = e.target.value;
@@ -26,6 +28,8 @@ export default function Dashboard(){
         let lowercase_temp = 0;
         let numbers_temp = 0;
         let symbols_temp = 0;
+
+        {/*Compares each value of the current password against the regexes to count for the amount each character type occurs*/}
         for(let i = 0; i < newPassword.length; i++){
             const char = newPassword[i];
 
@@ -47,6 +51,10 @@ export default function Dashboard(){
 
     return(
         <>
+            <div className="dashboard-header">
+
+            </div>
+            
             {/*Take the users input, stores it in the password variable*/}
             <label>
                 Enter your password here:
@@ -67,6 +75,11 @@ export default function Dashboard(){
                     <li>Numbers: {numberCount}</li>
                 </ul>
             </p>
+                <div className="dashboard-footer">
+                    <Button className="abt-dev-btn" variant="primary">
+                        About the Developer 
+                    </Button>
+                </div>
         </>
-    )
+    );
 }
