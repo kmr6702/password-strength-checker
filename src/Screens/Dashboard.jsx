@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+
 export default function Dashboard(){
     const [password, setPassword] = useState('');   //A state variable for the password input
     const [length, setLength] = useState(0);        //A varaible that stores the length of the password
@@ -10,7 +11,7 @@ export default function Dashboard(){
 
     const handleChange = (e) => {
         setPassword(e.target.value);
-        setLength(length + 1);
+        setLength(e.target.value.length);
     }
 
     return(
