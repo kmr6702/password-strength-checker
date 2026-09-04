@@ -1,0 +1,16 @@
+.dashboard-header{
+    position: fixed;
+    top: 0;
+    height: 30px;
+    padding: 20px;
+}
+
+.dashboard-footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 18px;
+}
