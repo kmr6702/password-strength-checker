@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap';
 import './Dashboard.css';
 import { reviewRealTime } from '../Analysis/realTimeReview';
 import { ratingAnalysis } from '../Analysis/realTimeReview';
+import { Link } from 'react-router-dom';
 
 
 
@@ -62,7 +63,11 @@ export default function Dashboard(){
                 </ul>
             </p>
                 <div className="dashboard-footer">
-                    <Button className="abt-dev-btn" variant="primary">
+                    <Button
+                    as={Link} 
+                    to="/about-the-dev"
+                    className="abt-dev-btn" 
+                    variant="primary">
                         About the Developer 
                     </Button>
                 </div>
