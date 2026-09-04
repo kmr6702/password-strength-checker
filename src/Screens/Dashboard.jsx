@@ -44,6 +44,7 @@ export default function Dashboard(){
                 Enter your password here:
                 <input 
                     value={password} 
+                    maxLength={100}
                     onChange={handleChange}
                 />
             </label>
