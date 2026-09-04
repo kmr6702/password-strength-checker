@@ -26,10 +26,55 @@ export function reviewRealTime(password){
 
     }
 
+    {/*Returns the count of each character type*/}
     return {
         upperCaseCount,
         lowerCaseCount,
         numbersCount,
         symbolsCount
     };
+}
+
+export function ratingAnalysis(review, length){
+    {/*Very weak: A password less than 8 charcters*/}
+    {/*Weak: A password less than 16 characters*/}
+    {/*Moderate: A password with one character type that is 16+ characters*/}
+    {/*Strong: 16+ characters with a mix of two - three character types*/}
+    {/*Very strong: 16+ characters with call character types present */}
+
+    let charTypesPresent = 0; 
+    let rating = "Very Weak";
+
+    {/*A counter that tracks how many of each character type is present*/}
+    if(review.upperCaseCount != 0){
+        charTypesPresent++;
+    }
+
+    if(review.lowerCaseCount != 0){
+        charTypesPresent++;
+    }
+
+    if(review.numbersCount != 0){
+        charTypesPresent++;
+    }
+
+    if(review.symbolsCount != 0){
+        charTypesPresent++;
+    }
+
+    if(length <= 8 || charTypesPresent == 0){
+        rating = "Very Weak";
+    }else if(length > 8 && length < 16){
+        rating = "Weak";
+    }else if(length >= 16 && charTypesPresent == 1){
+        rating = "Moderate";
+    }else if(length >= 16  && (charTypesPresent == 2 || charTypesPresent == 3)){
+        rating = "Strong";
+    }else if(length >= 16 && charTypesPresent == 4){
+        rating = "Very Strong";
+    }else{
+        rating = "Very Weak";
+    }
+
+    return (rating);
 }

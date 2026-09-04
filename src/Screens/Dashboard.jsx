@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import './Dashboard.css';
 import { reviewRealTime } from '../Analysis/realTimeReview';
+import { ratingAnalysis } from '../Analysis/realTimeReview';
 
 
 
@@ -12,6 +13,8 @@ export default function Dashboard(){
     const [lowerCaseCount, setLowerCaseCount] = useState(0); //A variable to hold the amount or lowercase letters present in the password 
     const [symbolCount, setSymbolCount] = useState(0);       //A variable to hold the amount of symbols present in the password 
     const [numberCount, setNumberCount] = useState(0);       //A varaible to hold the amount of numbers present in the password 
+
+    const [quickAnalysis, setQuickAnalysis] = useState("Very Weak");
     
     {/*Update the state everytime a change is made to the password input*/}
     const handleChange = (e) => {
@@ -26,6 +29,8 @@ export default function Dashboard(){
         setUpperCaseCount(review.upperCaseCount);
         setSymbolCount(review.symbolsCount);
         setNumberCount(review.numbersCount);
+
+        setQuickAnalysis(ratingAnalysis(review, newPassword.length));
     }
 
     return(
@@ -52,6 +57,7 @@ export default function Dashboard(){
                     <li>Symbol Count: {symbolCount}</li>
                     <li>Length: {length}</li>
                     <li>Numbers: {numberCount}</li>
+                    <li>Rating: {quickAnalysis}</li>
                 </ul>
             </p>
                 <div className="dashboard-footer">
