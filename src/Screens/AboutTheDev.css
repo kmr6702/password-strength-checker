@@ -1,0 +1,26 @@
+body{
+    background-color: 242, 226, 210;
+}
+
+ul{
+    list-style: none;
+    text-align: start;
+    
+}
+
+header{
+    text-align: start;
+    font-weight: bold;
+    font-size: larger;
+}
+
+p{
+    text-align: justify;
+    font-size: large;
+}
+
+.column{
+    float: left;
+    width: 50%;
+    padding: 2%;
+}
