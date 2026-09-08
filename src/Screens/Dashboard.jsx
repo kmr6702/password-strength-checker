@@ -40,37 +40,43 @@ export default function Dashboard(){
 
             </div>
 
-            {/*Take the users input, stores it in the password variable*/}
-            <label>
-                Enter your password here:
-                <input 
-                    value={password} 
-                    maxLength={100}
-                    onChange={handleChange}
-                />
-            </label>
-            
+            <div className="row">
+                {/*Take the users input, stores it in the password variable*/}
+                <label className='input'>
+                    Enter your password here:
+                    <input 
+                        value={password} 
+                        type="password"
+                        maxLength={100}
+                        onChange={handleChange}
+                    />
+                </label>
+                
+                <p className='rating'>
+                    Rating: {quickAnalysis}
+                </p>
 
-            <p>
-                <ul>
-                    <li>Your Password is: {password}</li>
-                    <li>Uppercase Count: {upperCaseCount}</li>
-                    <li>Lowercase Count: {lowerCaseCount}</li>
-                    <li>Symbol Count: {symbolCount}</li>
-                    <li>Length: {length}</li>
-                    <li>Numbers: {numberCount}</li>
-                    <li>Rating: {quickAnalysis}</li>
-                </ul>
-            </p>
-                <div className="dashboard-footer">
-                    <Button
-                    as={Link} 
-                    to="/about-the-dev"
-                    className="abt-dev-btn" 
-                    variant="primary">
-                        About the Developer 
-                    </Button>
-                </div>
+                <p>
+                    <ul>
+                        <li>Your Password is: {password}</li>
+                        <li>Uppercase Count: {upperCaseCount}</li>
+                        <li>Lowercase Count: {lowerCaseCount}</li>
+                        <li>Symbol Count: {symbolCount}</li>
+                        <li>Length: {length}</li>
+                        <li>Numbers: {numberCount}</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div className="dashboard-footer">
+                <Button
+                as={Link} 
+                to="/about-the-dev"
+                className="abt-dev-btn" 
+                variant="primary">
+                    About the Developer 
+                </Button>
+            </div>
         </>
     );
 }
