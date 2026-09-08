@@ -1,8 +1,21 @@
+body{
+    background-color: 242, 226, 210;
+}
+
+.rating{
+    text-align: center;
+    font-size: x-large;
+}
+
 .dashboard-header{
     position: fixed;
     top: 0;
     height: 30px;
     padding: 20px;
+}
+
+.row{
+    padding-top: 20%;
 }
 
 .dashboard-footer{
@@ -13,4 +26,9 @@
     justify-content: flex-start;
     padding: 20px;
     gap: 18px;
+}
+
+.input{
+    font-size: larger;
+    padding: 15px;
 }
