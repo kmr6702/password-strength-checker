@@ -46,9 +46,11 @@ export default function Dashboard(){
                     Enter your password here:
                     <input 
                         value={password} 
+                        name='password-checker'
                         type="password"
                         maxLength={100}
                         onChange={handleChange}
+                        autoComplete='new-password'
                     />
                 </label>
                 
@@ -56,7 +58,7 @@ export default function Dashboard(){
                     Rating: {quickAnalysis}
                 </p>
 
-                <p>
+                {/* <p>
                     <ul>
                         <li>Your Password is: {password}</li>
                         <li>Uppercase Count: {upperCaseCount}</li>
@@ -65,7 +67,7 @@ export default function Dashboard(){
                         <li>Length: {length}</li>
                         <li>Numbers: {numberCount}</li>
                     </ul>
-                </p>
+                </p> */}
             </div>
 
             <div className="dashboard-footer">
