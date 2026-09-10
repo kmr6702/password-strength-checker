@@ -101,6 +101,10 @@ export default function Dashboard(){
                 variant="primary">
                     About the Developer 
                 </Button>
+
+                <p>
+                    *This password checker runs completely on your device. The password is not stored or sent to a server.
+                </p>
             </div>
         </>
     );
