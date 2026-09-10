@@ -32,3 +32,11 @@ body{
     font-size: larger;
     padding: 15px;
 }
+
+.info-icon{
+    height: 50px !important;
+    width: 75px !important;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}

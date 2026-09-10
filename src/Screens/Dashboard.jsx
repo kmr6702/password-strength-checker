@@ -4,8 +4,7 @@ import './Dashboard.css';
 import { reviewRealTime } from '../Analysis/realTimeReview';
 import { ratingAnalysis } from '../Analysis/realTimeReview';
 import { Link } from 'react-router-dom';
-
-
+import infoImage from './Assets/Info.png';
 
 export default function Dashboard(){
     const [password, setPassword] = useState('');   //A state variable for the password input
@@ -53,11 +52,18 @@ export default function Dashboard(){
                         autoComplete='new-password'
                     />
                 </label>
+
+                <img 
+                    src={infoImage} 
+                    alt='Information Icon' 
+                    className='info-icon'
+                />
                 
                 <p className='rating'>
                     Rating: {quickAnalysis}
                 </p>
 
+                {/*Debugging use only*/}
                 {/* <p>
                     <ul>
                         <li>Your Password is: {password}</li>
