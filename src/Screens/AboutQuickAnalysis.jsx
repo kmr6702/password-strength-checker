@@ -1,10 +1,13 @@
 import { Modal } from "react-bootstrap";
+import './AboutQuickAnalysis.css';
 
-export default function AboutQuickAnalysis(show, onClose){
+export default function AboutQuickAnalysis({show, onClose}){
     return(
-        <Modal show={show} onHide={onClose}>
-            <Modal.Header closeButton/>
-            <Modal.body>
+        <Modal show={show} onHide={onClose} size="lg">
+            <Modal.Header closeButton>
+                <Modal.Title>About This Rating</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
                 <h3>This is not an official rating!</h3>
                 <h4>Current Password Guidelines:</h4>
                 <p>
@@ -13,7 +16,7 @@ export default function AboutQuickAnalysis(show, onClose){
                     but the priority is on length. Special characters can be added to passwords, but companys and sites are encouraged to remove the requirement.
                 </p>
 
-                <h4>This is a quick analysis only</h4>
+                <h4>This is a quick analysis only.</h4>
                 <header>What does that mean?</header>
                 <p>
                     Quick analysis means that it is a real time review of the password as you type. This analysis only reviews length and character types. This analysis is not a thorough analysis,
@@ -50,7 +53,7 @@ export default function AboutQuickAnalysis(show, onClose){
                     </table>
                 </p>
 
-                <h4>What are the four character types</h4>
+                <h4>What are the four character types?</h4>
                 <p>
                     <ol>
                         <li>Lowercase letters a-z</li>
@@ -59,7 +62,7 @@ export default function AboutQuickAnalysis(show, onClose){
                         <li>Special characters: !@#$%^&*(),</li>
                     </ol>
                 </p>
-            </Modal.body>
+            </Modal.Body>
         </Modal>   
     );
 };

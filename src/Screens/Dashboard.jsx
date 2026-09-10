@@ -5,6 +5,7 @@ import { reviewRealTime } from '../Analysis/realTimeReview';
 import { ratingAnalysis } from '../Analysis/realTimeReview';
 import { Link } from 'react-router-dom';
 import infoImage from './Assets/Info.png';
+import AboutQuickAnalysis from './AboutQuickAnalysis';
 
 export default function Dashboard(){
     const [password, setPassword] = useState('');   //A state variable for the password input
@@ -15,6 +16,7 @@ export default function Dashboard(){
     const [numberCount, setNumberCount] = useState(0);       //A varaible to hold the amount of numbers present in the password 
 
     const [quickAnalysis, setQuickAnalysis] = useState("Very Weak");
+    const [showAboutQuickAnalysis, setShowAbouutQuickAnalysis] = useState(false);
     
     {/*Update the state everytime a change is made to the password input*/}
     const handleChange = (e) => {
@@ -53,16 +55,31 @@ export default function Dashboard(){
                     />
                 </label>
 
-                <img 
+                {/* <img 
                     src={infoImage} 
                     alt='Information Icon' 
                     className='info-icon'
-                />
+                /> */}
                 
                 <p className='rating'>
                     Rating: {quickAnalysis}
+                    <Button
+                        variant="link"
+                        className='info-button'
+                        onClick={() => setShowAbouutQuickAnalysis(true)}
+                        >
+                            <img 
+                                src={infoImage} 
+                                alt='Information Icon' 
+                                className='info-icon'
+                            />
+                    </Button>
                 </p>
 
+                <AboutQuickAnalysis
+                    show={showAboutQuickAnalysis}
+                    onClose={() => setShowAbouutQuickAnalysis(false)}
+                />
                 {/*Debugging use only*/}
                 {/* <p>
                     <ul>
