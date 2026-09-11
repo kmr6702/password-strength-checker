@@ -23,14 +23,14 @@ export default function Dashboard(){
         const newPassword = e.target.value;
     
         setPassword(newPassword);
-        setLength(newPassword.length);
+        // setLength(newPassword.length);
 
         const review = reviewRealTime(newPassword);
 
-        setLowerCaseCount(review.lowerCaseCount);
-        setUpperCaseCount(review.upperCaseCount);
-        setSymbolCount(review.symbolsCount);
-        setNumberCount(review.numbersCount);
+        // setLowerCaseCount(review.lowerCaseCount);
+        // setUpperCaseCount(review.upperCaseCount);
+        // setSymbolCount(review.symbolsCount);
+        // setNumberCount(review.numbersCount);
 
         setQuickAnalysis(ratingAnalysis(review, newPassword.length));
     }
