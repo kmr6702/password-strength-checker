@@ -17,7 +17,7 @@ export default function AboutTheDev(){
 
                 <header>What Skills Am I'm Learning and Using:</header>
                 <p>
-                    <ul role='list'>
+                    <ul>
                         <header className='ListHeaders'>Cybersecurity:</header>
                         <li>Password security</li>
                         <li>CISA/NIST password guidance</li>

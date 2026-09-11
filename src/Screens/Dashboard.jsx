@@ -9,16 +9,16 @@ import AboutQuickAnalysis from './AboutQuickAnalysis';
 
 export default function Dashboard(){
     const [password, setPassword] = useState('');   //A state variable for the password input
-    const [length, setLength] = useState(0);        //A varaible that stores the length of the password
-    const [upperCaseCount, setUpperCaseCount] = useState(0); //A varaible to hold the amount of uppercase letters present in the password 
-    const [lowerCaseCount, setLowerCaseCount] = useState(0); //A variable to hold the amount or lowercase letters present in the password 
-    const [symbolCount, setSymbolCount] = useState(0);       //A variable to hold the amount of symbols present in the password 
-    const [numberCount, setNumberCount] = useState(0);       //A varaible to hold the amount of numbers present in the password 
+    // const [length, setLength] = useState(0);        //A varaible that stores the length of the password
+    // const [upperCaseCount, setUpperCaseCount] = useState(0); //A varaible to hold the amount of uppercase letters present in the password 
+    // const [lowerCaseCount, setLowerCaseCount] = useState(0); //A variable to hold the amount or lowercase letters present in the password 
+    // const [symbolCount, setSymbolCount] = useState(0);       //A variable to hold the amount of symbols present in the password 
+    // const [numberCount, setNumberCount] = useState(0);       //A varaible to hold the amount of numbers present in the password 
 
     const [quickAnalysis, setQuickAnalysis] = useState("Very Weak");
     const [showAboutQuickAnalysis, setShowAbouutQuickAnalysis] = useState(false);
     
-    {/*Update the state everytime a change is made to the password input*/}
+    //Update the state everytime a change is made to the password input
     const handleChange = (e) => {
         const newPassword = e.target.value;
     

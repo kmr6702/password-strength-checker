@@ -36,11 +36,11 @@ export function reviewRealTime(password){
 }
 
 export function ratingAnalysis(review, length){
-    {/*Very weak: A password less than 8 charcters*/}
-    {/*Weak: A password less than 16 characters*/}
-    {/*Moderate: A password with one character type that is 16+ characters*/}
-    {/*Strong: 16+ characters with a mix of two - three character types*/}
-    {/*Very strong: 16+ characters with call character types present */}
+    //Very weak: A password less than 8 charcters
+    // Weak: A password less than 16 characters
+    // Moderate: A password with one character type that is 16+ characters
+    // Strong: 16+ characters with a mix of two - three character types
+    // Very strong: 16+ characters with call character types present
 
     let charTypesPresent = 0; 
     let rating = "Very Weak";
